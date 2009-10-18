@@ -1,0 +1,21 @@
+HerokuSassAndCache
+==================
+
+This plugin will do the following:
+- Generate SASS files inside tmp/stylesheets
+- If you are combining all your JS and CSS by adding ":cache => true", it will generate the combined file inside tmp/javascript and tmp/stylesheets
+
+The included controller should allow you to access these files like normal. Etags are provided so that Heroku's Varnish caches the files.
+
+I know, the name is terrible. Its not very imaginative.
+
+Make it work
+============
+
+Add to config/routes.rb "map.heroku_sass_and_cache"
+
+There is a rake task available to generate the css files:
+RAILS_ENV=production rake heroku_sass_and_cache:generate_style_sheets
+
+
+Copyright (c) 2009 Mooktakim Ahmed, released under the MIT license

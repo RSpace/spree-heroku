@@ -1,0 +1,21 @@
+haml-edge --version '2.3.51'
+json_pure --version '1.1.9'
+rubyforge --version '2.0.3'
+highline --version '>=1.4.0'
+authlogic --version '>=2.0.11'
+activemerchant --version '>=1.4.1'
+tlsmail --version '0.0.1'
+activerecord-tableless --version '>=0.1.0'
+haml --version '2.2.0'
+chriseppstein-compass --source gems.github.com --version '0.8.17'
+calendar_date_select --version '1.15'    
+rsl-stringex --source gems.github.com
+chronic
+javan-whenever --source gems.github.com
+searchlogic --version '>= 2.3.5'
+mislav-will_paginate --version '~> 2.3.11' --source gems.github.com
+rspec-rails --version '>= 1.2.0'
+rspec --version '>= 1.2.0'
+right_http_connection --version '1.2.4'
+right_aws --version '1.10.0'
+spree --version '0.9.1'
