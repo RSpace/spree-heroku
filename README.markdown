@@ -75,3 +75,7 @@ This extension has been tested with Spree 0.9.1. If you have problems using the 
 # Thanks to 
 
 Mooktakim Ahmed for creating the HerokuSassAndCache plugin, which is bundled with this extension.
+
+# Copyright and license
+
+Copyright (c) 2009 Casper Fabricius, released under the MIT license
