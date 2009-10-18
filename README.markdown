@@ -19,6 +19,7 @@ spree myapp
 Install this extension:
 
 <pre>
+cd myapp
 script/extension install git://github.com/RSpace/spree-heroku.git
 </pre>
 
@@ -38,12 +39,20 @@ heroku create myapp
 git push heroku master
 </pre>
 
+Enable SSL, since Spree uses SSL for administration and payment flow in its standard setup:
+
+<pre>
+heroku addons:add "Piggyback SSL"
+</pre>
+
 Bootstrap the database locally (not possible in Heroku, because the rake task attempts to copy files), and transfer it to Heroku:
 
 <pre>
 rake db:bootstrap
 heroku db:push
 </pre>
+
+Please note that if you choose to load sample data, images will be missing for all products. Spree's bootstrap task copies the images locally, but it doesn't put them on S3, where this extension configures Spree to look for images.
 
 Configure the extension with your S3 information and restart the application on Heroku:
 
@@ -52,10 +61,15 @@ heroku console
 >> Spree::Heroku::Config.set(:bucket => 'bucket name')
 >> Spree::Heroku::Config.set(:access_key_id => 'access key')
 >> Spree::Heroku::Config.set(:secret_access_key => 'secret access key')
+>> exit
 heroku restart
 </pre>
 
 That's it - you're done! :)
+
+# Troubleshooting
+
+This extension has been tested with Spree 0.9.1. If you have problems using the extension with a newer version of Spree, it could be due to Spree's gem dependencies having changed. The gems in the heroku .gems manifest must mach the gems and versions required by Spree. This page shows the current dependencies of the newest version of Spree: http://gemcutter.org/gems/spree
 
 
 # Thanks to 
