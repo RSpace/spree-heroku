@@ -11,15 +11,16 @@ class HerokuExtension < Spree::Extension
   # def self.require_gems(config)
   #   config.gem "gemname-goes-here", :version => '1.2.3'
   # end
-  
+
   def activate
-    
+
     # Patch up for strange error in a call to javascript include tag
     require File.expand_path(File.dirname(__FILE__) + '/lib/javascript_include_tag_patch.rb')
-    
+
     # Disable caching in the production environment
     ActionController::Base.perform_caching = false if RAILS_ENV == 'production'
-    
+    Spree::BaseController.perform_caching = false if RAILS_ENV == 'production'
+
     # Add your extension tab to the admin.
     # Requires that you have defined an admin controller:
     # app/controllers/admin/yourextension_controller
