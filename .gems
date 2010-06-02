@@ -1,4 +1,4 @@
-rails -v 2.3.5
+rails -v '2.3.5'
 highline -v '1.5.1'
 authlogic -v '>=2.1.2'
 authlogic-oid -v '1.0.4'
@@ -13,3 +13,5 @@ will_paginate -v '2.3.11'
 faker -v '0.3.1'
 paperclip -v '>=2.3.1.1'
 state_machine -v '0.8.0'
+aws-s3 -v '>=0.6.2'
+spree -v '0.10.2'

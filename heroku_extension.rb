@@ -6,6 +6,10 @@ class HerokuExtension < Spree::Extension
   version "0.2"
   description "Allows Spree to run on Heroku"
   url "http://github.com/chipiga/spree-heroku"
+  
+  def self.require_gems(config)
+    config.gem 'aws-s3', :lib => "aws/s3"
+  end
 
   def activate
 
