@@ -20,7 +20,7 @@ Install this extension:
 
 <pre>
 cd myapp
-script/extension install git://github.com/chipiga/spree-heroku.git
+script/extension install git://github.com/RSpace/spree-heroku.git
 </pre>
 
 Copy the .gems manifest to the root of your application:
@@ -29,7 +29,17 @@ Copy the .gems manifest to the root of your application:
 cp vendor/extensions/heroku/.gems ./
 </pre>
 
-Configure the extension with your S3 information:
+Configure the extension with your S3 information.
+
+You can either specify the S3 credentials via Heroku's environment variables (recommended):
+
+<pre>
+heroku config:add S3_KEY=[your S3 key]
+heroku config:add S3_SECRET=[your S3 secret]
+heroku config:add S3_BUCKET=[your S3 bucket]
+</pre>
+
+- or you can use a YAML file:
 
 <pre>
 cp vendor/extensions/heroku/config/aws_s3.yml.example vendor/extensions/heroku/config/aws_s3.yml
