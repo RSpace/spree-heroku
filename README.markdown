@@ -83,5 +83,6 @@ This extension has been tested with Spree 0.10.2. If you have problems using the
 Copyright (c) 2009 Casper Fabricius, released under the MIT license
 
 Contributors:
+
 * Pavel Chipiga
 * Andrey Voronkov
