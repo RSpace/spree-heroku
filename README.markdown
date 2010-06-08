@@ -84,5 +84,5 @@ Copyright (c) 2009 Casper Fabricius, released under the MIT license
 
 Contributors:
 
-* Pavel Chipiga
-* Andrey Voronkov
+*   Pavel Chipiga
+*   Andrey Voronkov
