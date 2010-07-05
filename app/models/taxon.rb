@@ -10,7 +10,7 @@ class Taxon < ActiveRecord::Base
   has_attached_file :icon,
                 :styles => { :mini => '32x32>', :normal => '128x128>' },
                 :default_style => :mini,
-                :path => "/assets/taxons/:id/:style/:basename.:extension",
+                :path => "assets/taxons/:id/:style/:basename.:extension",
                 :storage => "s3",
                 :s3_credentials => {
                   :access_key_id => ENV['S3_KEY']  || HEROKU_AWS_S3['access_key_id'],
